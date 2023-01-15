@@ -1,18 +1,18 @@
-from game_of_life import Grid
+from game_of_life import Grid, Cell
 
 
 def test_create_a_grid_10_by_10():
     expected_grid = [
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
-        ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
     ]
 
     grid = Grid(width=10, height=10)
