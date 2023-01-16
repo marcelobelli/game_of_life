@@ -17,11 +17,25 @@ class Grid:
 @dataclass
 class Cell:
     def __post_init__(self):
-        self._state = "X"
-
-    @property
-    def state(self):
-        return self._state
+        self.state = CellState()
 
     def change_state(self):
-        self._state = "0" if self.state == "X" else "X"
+        self.state.change_state()
+
+
+@dataclass
+class CellState:
+    STATE_ALIVE = "0"
+    STATE_DEAD = "X"
+
+    def __post_init__(self):
+        self._state = self.STATE_DEAD
+
+    def __call__(self):
+        return self._state
+
+    def __eq__(self, other):
+        return self() == other
+
+    def change_state(self):
+        self._state = self.STATE_ALIVE if self._state == self.STATE_DEAD else self.STATE_DEAD

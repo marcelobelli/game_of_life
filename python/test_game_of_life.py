@@ -1,4 +1,4 @@
-from game_of_life import Grid, Cell
+from game_of_life import Grid, Cell, CellState
 
 
 def test_create_a_grid_10_by_10():
@@ -23,8 +23,8 @@ def test_create_a_grid_10_by_10():
 def test_a_cell_can_be_death_or_alive():
     cell = Cell()
 
-    assert cell.state == "X"
+    assert cell.state == CellState.STATE_DEAD
 
     cell.change_state()
 
-    assert cell.state == "0"
+    assert cell.state == CellState.STATE_ALIVE
